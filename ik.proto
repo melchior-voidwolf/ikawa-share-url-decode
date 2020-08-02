@@ -1,0 +1,31 @@
+package ikawapackage;
+syntax = "proto3";
+
+message RoastProfile {
+   int32 schema = 1;
+   string id = 2;
+   string name = 3;
+   repeated TempPoint tempPoints = 4;
+   repeated FanPoint fanPoints = 5;
+   int32 tempSensor = 6;
+   FanPoint cooldownFan = 7;
+   Unknown unknown = 8;
+}
+
+message FanPoint{
+   int32 time = 1;
+   int32 power = 2;
+}
+
+message TempPoint{
+   int32 time = 1;
+   int32 temp = 2;
+}
+
+message Unknown {
+   string coffeeName = 1;
+   string userId = 2;
+   string coffeeId = 3;
+   string coffeeWebUrl = 4;
+   string int32 = 5;
+}
